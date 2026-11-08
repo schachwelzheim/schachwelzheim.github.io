@@ -40,6 +40,11 @@ def parse_frontmatter(content):
 def get_title(content):
     frontmatter, body = parse_frontmatter(content)
 
+    # 1. Zuerst prüfen, ob im Frontmatter schon ein Titel steht
+    if frontmatter and frontmatter.get("title"):
+        return str(frontmatter.get("title")).strip()
+
+    # 2. Ansonsten aus der Überschrift im Body extrahieren
     match = re.search(r"^#\s+(.+)$", body, re.MULTILINE)
     if match:
         return match.group(1).strip()
@@ -59,6 +64,22 @@ def get_title(content):
     return ""
 
 
+def ensure_frontmatter_title(content):
+    """Sorgt dafür, dass das Frontmatter immer den passenden Titel und eine Beschreibung aus dem Inhalt enthält."""
+    title = get_title(content)
+    if not title:
+        return content
+
+    frontmatter, body = parse_frontmatter(content)
+    
+    # Titel im Frontmatter aktualisieren oder setzen
+    frontmatter["title"] = title
+
+    # YAML-Frontmatter sauber zusammenbauen
+    fm_str = yaml.dump(frontmatter, allow_unicode=True, sort_keys=False).strip()
+    return f"---\n{fm_str}\n---\n\n{body.lstrip()}"
+
+
 def get_tags(content):
     frontmatter, _ = parse_frontmatter(content)
 
@@ -75,8 +96,6 @@ def get_tags(content):
 
 def get_teaser(content, words_count=10):
     _, body = parse_frontmatter(content)
-
-    title = get_title(content)
 
     lines = body.splitlines()
     words = []
