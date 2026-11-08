@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Seite wird weitergeleitet...</title>
+  <script>
+    (function() {
+      // Liest den aktuellen Pfad aus (z.B. /schachwelzheim/aktuelles/2026-09-29/)
+      var path = window.location.pathname;
+      
+      // Prüft, ob der Pfad mit /schachwelzheim/ beginnt
+      if (path.startsWith('/schachwelzheim/')) {
+        // Entfernt '/schachwelzheim' aus dem Pfad
+        var newPath = path.replace(/^\/schachwelzheim/, '');
+        
+        // Baut die neue Ziel-URL zusammen (inkl. Such-Parameter und Anker)
+        var newUrl = window.location.origin + newPath + window.location.search + window.location.hash;
+        
+        // Leitet den Browser sofort auf die neue URL um
+        window.location.replace(newUrl);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <h1>Seite wird umgeleitet...</h1>
+  <p>Falls Sie nicht automatisch weitergeleitet werden, klicken Sie bitte auf den folgenden Link:</p>
+  <p><a id="fallback-link" href="/">Zur Hauptseite</a></p>
+
+  <script>
+    // Setzt den Fallback-Link direkt auf die Zielseite
+    var path = window.location.pathname;
+    if (path.startsWith('/schachwelzheim/')) {
+      var newPath = path.replace(/^\/schachwelzheim/, '');
+      document.getElementById('fallback-link').href = window.location.origin + newPath;
+    }
+  </script>
+</body>
+</html>
