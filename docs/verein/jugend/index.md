@@ -22,7 +22,7 @@ Der wöchentliche Trainingsbetrieb (außer in den Schulferien) ist in zwei Grupp
 
 ## 📍 Spielort & Info
 
-* **Ort:** Gespielt wird im [Vereinsheim](../spiellokal).
+* **Ort:** Gespielt wird im [Vereinsheim](/verein/spiellokal).
 * **Mitmachen & Reinschnuppern:** Interessierte Kinder und Jugendliche können jederzeit gerne außerhalb der Schulferien zu den Trainingszeiten vorbeischauen und ein unverbindliches Schnuppertraining absolvieren.
 > Meldet Euch bei Fragen gern per [Mail](mailto:schach@tsfwelzheim.de).
 

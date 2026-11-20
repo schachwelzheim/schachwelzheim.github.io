@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block extrahead %}
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var targetUrl;
+
+      // 1. Fall: Alter Link mit '/schachwelzheim/' -> auf neue Ziel-URL umleiten
+      if (path.startsWith('/schachwelzheim/')) {
+        var newPath = path.replace(/^\/schachwelzheim/, '');
+        targetUrl = window.location.origin + newPath + window.location.search + window.location.hash;
+      } 
+      // 2. Fall: Seite existiert nicht -> auf Startseite umleiten
+      else {
+        targetUrl = window.location.origin + '/';
+      }
+
+      // Sofortige Weiterleitung im Browser ausführen
+      window.location.replace(targetUrl);
+    })();
+  </script>
+{% endblock %}
+
+{% block content %}
+  <h1>Seite wird weitergeleitet...</h1>
+  <p>Sie werden automatisch zur passenden Seite weitergeleitet.</p>
+  <p>Falls die automatische Weiterleitung nicht funktioniert, <a id="redirect-link" href="/">klicken Sie bitte hier</a>.</p>
+
+  <script>
+    // Fallback-Link anpassen, falls JavaScript im Browser deaktiviert ist
+    (function() {
+      var path = window.location.pathname;
+      var link = document.getElementById('redirect-link');
+      if (path.startsWith('/schachwelzheim/')) {
+        link.href = window.location.origin + path.replace(/^\/schachwelzheim/, '');
+      } else {
+        link.href = window.location.origin + '/';
+      }
+    })();
+  </script>
+{% endblock %}

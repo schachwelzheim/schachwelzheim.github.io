@@ -11,6 +11,7 @@ theme:
   language: de
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
+  custom_dir: overrides
   
   palette:
     - media: "(prefers-color-scheme: light)"
