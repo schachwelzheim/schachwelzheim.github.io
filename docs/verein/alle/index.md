@@ -17,5 +17,5 @@ Jede und jeder ist herzlich willkommen, um bei uns ganz unkompliniert und *just 
 
 ## 📍 Spielort & Info
 
-* **Ort:** Gespielt wird im [Vereinsheim](../spiellokal/).
+* **Ort:** Gespielt wird im Besprechungszimmer der TSF Geschäftsstelle [Spiellokal](../spiellokal/).
 * **Vorkenntnisse:** Egal ob Anfänger, Wiedereinsteiger oder erfahrener Spieler – komm einfach vorbei! 💚
