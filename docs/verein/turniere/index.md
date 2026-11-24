@@ -10,7 +10,7 @@ Hier findest du alle Infos, Runden und Termine zu unseren internen Meisterschaft
 
 <!-- Blitztermine -->
 
-    *   📊 [Ergebnisse](../turniere/images/BS_2026_27.png)
+    *   📊 [Ergebnisse](../turniere/images/BS_2026-27.png)
 
 -   __🐇 Schnellschach__
 
@@ -18,7 +18,7 @@ Hier findest du alle Infos, Runden und Termine zu unseren internen Meisterschaft
 
 <!-- Schnelltermine -->
 
-    *   📊 [Ergebnisse](../turniere/images/SS_2026_27.png)
+    *   📊 [Ergebnisse](../turniere/images/SS_2026-27.png)
 
 -   __🏆 Stadtmeisterschaft__
 
@@ -27,6 +27,8 @@ Hier findest du alle Infos, Runden und Termine zu unseren internen Meisterschaft
 <!-- Stadtmeisterschaftstermine -->
 
     *   ℹ️ [Mehr Infos](../../aktuelles/2026-10-07/)
+
+    *   📊 [Ergebnisse](../turniere/images/SM_2026-27.png)
 
 </div>
 
